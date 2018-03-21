@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'snippets.apps.SnippetsConfig',
 ]
 SITE_ID = 2
 
@@ -127,7 +129,7 @@ DATABASE_APPS_MAPPING = {
     # example:
     # 'app_name':'database_name',
     'report': 'ora1',
-    'admin': 'defualt',
+    # 'admin': 'defualt',
     'regs':  'defualt',
 }
 
@@ -191,3 +193,8 @@ EMAIL_HOST_PASSWORD = 'ljw1987'
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER = "lijianwei@mail.haoyisheng.com"
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
+
+
+REST_FRAMEWORK = {
+    'PAGE_SIZE': 3
+}

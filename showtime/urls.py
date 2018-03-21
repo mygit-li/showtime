@@ -22,4 +22,6 @@ urlpatterns = [
     path('index/', views.index, name='index'),
     path('accounts/', include('allauth.urls')),
     path('reports/', include('reports.urls')),
+    path('', include('snippets.urls')),
 ]
+
