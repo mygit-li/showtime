@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'snippets.apps.SnippetsConfig',
+    'myapi01',
 ]
 SITE_ID = 2
 
@@ -129,6 +130,7 @@ DATABASE_APPS_MAPPING = {
     # example:
     # 'app_name':'database_name',
     'report': 'ora1',
+    'myapi01': 'ora1',
     # 'admin': 'defualt',
     'regs':  'defualt',
 }
@@ -196,5 +198,6 @@ EMAIL_USE_TLS = True
 
 
 REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 3
 }
