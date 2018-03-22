@@ -40,7 +40,7 @@ def area_report(request):
     # visual_range = [0, 300]：图例条范围
     # visual_text_color = '#fff'：图例条颜色
     map.add("各省注册量", attr, value, maptype='china', is_visualmap=True, visual_text_color='#000',
-            visual_range=[0, max_v[0][0]], )
+            visual_range=[0, max_v[0][0]], is_label_show = True,)
     data = {'data': map.render_embed()}
     return render(request, 'reports/registionofarea.html', data)
 
